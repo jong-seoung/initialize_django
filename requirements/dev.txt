@@ -2,3 +2,4 @@
 
 django-debug-toolbar==4.4.6
 pre-comit===3.7.1
+ipython
