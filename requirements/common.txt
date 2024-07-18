@@ -5,3 +5,4 @@ django-template-partials==24.2
 django-htmx==1.18.
 django-crispy-forms==2.2
 crispy-bootstrap5==2024.2
+django_components==0.84

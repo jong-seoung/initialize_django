@@ -52,9 +52,12 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
-    "django.contrib.staticfiles",
+    "django_components.safer_staticfiles",
     # third apps
     "django_extensions",
+    "crispy_forms",
+    "crispy_bootstrap5",
+    "django_components",
     "django_htmx",
     "template_partials",
     # local apps
@@ -83,7 +86,7 @@ ROOT_URLCONF = "config.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [BASE_DIR / "core" / "src-django-components"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -132,6 +135,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = "static/"
+
+STATICFILES_DIRS = [BASE_DIR / "core" / "src-django-components"]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
