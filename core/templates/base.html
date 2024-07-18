@@ -19,11 +19,15 @@
 &copy; copy
 
 {% if debug %}
-    <script src="{% static 'htmx/1.9.11/htmx.js' %}"></script>
+    <script src="{% static 'htmx/1.9.12/htmx.js' %}"></script>
 {% else %}
-    <script src="{% static 'htmx/1.9.11/htmx.min.js' %}"></script>
+    <script src="{% static 'htmx/1.9.12/htmx.min.js' %}"></script>
 {% endif %}
 <script src="{% static 'htmx/ext/hx-get-with-timestamp.js' %}"></script>
 <script src="{% static "toast-messages.js" %}"></script>
+
+{% include "_messages_as_event.html" %}
+
+
 </body>
 </html>
